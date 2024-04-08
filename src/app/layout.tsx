@@ -6,9 +6,9 @@ import { ThirdwebProvider } from "@/app/thirdweb";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "thirdweb SDK + Next starter",
+  title: "Yield Collective",
   description:
-    "Starter template for using thirdweb SDK with Next.js App router",
+    "The Yield Collective is a decentralized liquidity provisioning and market making protocol for the post-Dencun web3 world.",
 };
 
 export default function RootLayout({

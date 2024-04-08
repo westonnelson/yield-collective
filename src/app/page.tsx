@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ConnectButton } from "@/app/thirdweb";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
+import yieldCollectiveIcon from "@public/yieldcollective.svg";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
           <ConnectButton
             client={client}
             appMetadata={{
-              name: "Example App",
-              url: "https://example.com",
+              name: "Yield Collective",
+              url: "https://yieldcollective.xyz",
             }}
           />
         </div>
@@ -29,26 +30,25 @@ function Header() {
   return (
     <header className="flex flex-col items-center mb-20 md:mb-20">
       <Image
-        src={thirdwebIcon}
+        src={yieldCollectiveIcon}
         alt=""
-        className="size-[150px] md:size-[150px]"
+        className="size-[120px] md:size-[120px]"
         style={{
-          filter: "drop-shadow(0px 0px 24px #a726a9a8)",
+          filter: "(0px 0px 24px #FF66C4)",
         }}
       />
 
       <h1 className="text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-6 text-zinc-100">
-        thirdweb SDK
-        <span className="text-zinc-300 inline-block mx-1"> + </span>
-        <span className="inline-block -skew-x-6 text-blue-500"> Next.js </span>
+        <span className="text-zinc-300 inline-block mx-1"> Welcome to the </span>
+        <span className="inline-block -skew-x-6 text-pink-500"> Yield Collective </span>
       </h1>
 
       <p className="text-zinc-300 text-base">
-        Read the{" "}
+        The world of DeFi has been forever changed and{" "}
         <code className="bg-zinc-800 text-zinc-300 px-2 rounded py-1 text-sm mx-1">
-          README.md
+          Decentralized Liquidity Provisioning and Market Making
         </code>{" "}
-        file to get started.
+        post-Dencun upgrade require new strategies for long-term performance. Connect your wallet to get started.
       </p>
     </header>
   );
@@ -58,21 +58,21 @@ function ThirdwebResources() {
   return (
     <div className="grid gap-4 lg:grid-cols-3 justify-center">
       <ArticleCard
-        title="thirdweb SDK Docs"
-        href="https://portal.thirdweb.com/typescript/v5"
-        description="thirdweb TypeScript SDK documentation"
+        title="Yield Collective Docs"
+        href="https://docs.yieldcollective.xyz"
+        description="Learn about the Yield Collective and the project vision and the goals of the decentralized community."
       />
 
       <ArticleCard
-        title="Components and Hooks"
-        href="https://portal.thirdweb.com/typescript/v5/react"
-        description="Learn about the thirdweb React components and hooks in thirdweb SDK"
+        title="Concentrated Liquidity and Automation"
+        href="https://docs.yieldcollective.xyz"
+        description="Learn about the tools that enable decentralized liquidity provisioning and how to boost your performance."
       />
 
       <ArticleCard
-        title="thirdweb Dashboard"
-        href="https://thirdweb.com/dashboard"
-        description="Deploy, configure, and manage your smart contracts from the dashboard."
+        title="Automated Market Making and Uniswap V3"
+        href="https://docs.uniswap.org"
+        description="Learn more about the benefits of decentralized liquidity provisioning on the world's leading DEX, Uniswap."
       />
     </div>
   );
@@ -85,7 +85,7 @@ function ArticleCard(props: {
 }) {
   return (
     <a
-      href={props.href + "?utm_source=next-template"}
+      href={props.href}
       target="_blank"
       className="flex flex-col border border-zinc-800 p-4 rounded-lg hover:bg-zinc-900 transition-colors hover:border-zinc-700"
     >
